@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Project>
+    <component class="TProject">
+      <properties>
+        <string name="Name" value="Promet-App"/>
+        <string name="Filenames" value="index.html
+tasks.html
+timeregistering.html
+history.html
+tasks.js
+"/>
+        <string name="OpenNames" value="index.html
+base/themes/android3/theme.css
+base/options.html
+base/themes/android2/theme.css
+"/>
+      </properties>
+    </component>
+  </Project>
+</CONFIG>
