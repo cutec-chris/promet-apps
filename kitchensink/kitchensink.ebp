@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Project>
+    <component class="TProject">
+      <properties>
+        <string name="Name" value="Neues Projekt"/>
+        <string name="Filenames" value="index.html
+elements.html
+buttons.html
+"/>
+        <string name="OpenNames" value="index.html
+elements.html
+buttons.html
+"/>
+      </properties>
+    </component>
+  </Project>
+</CONFIG>
