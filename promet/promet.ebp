@@ -11,9 +11,10 @@ history.html
 tasks.js
 "/>
         <string name="OpenNames" value="index.html
-base/themes/android3/theme.css
 base/options.html
-base/themes/android2/theme.css
+tasks.html
+timeregistering.html
+history.html
 "/>
       </properties>
     </component>
