@@ -54,7 +54,7 @@ function SubmitNewEntry(){
   return false;
 }
 if (IsConnectionOK){
-  GetList("history","",1,function (aData)
+  GetList("history","",1,function (aSequence,aData)
     {
     console.log("Sync started...");
     var RemoteEntrys = aData;
