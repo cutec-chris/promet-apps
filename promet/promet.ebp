@@ -9,6 +9,7 @@ tasks.html
 timeregistering.html
 history.html
 tasks.js
+history.js
 "/>
         <string name="OpenNames" value="index.html
 base/options.html
@@ -16,7 +17,7 @@ tasks.html
 timeregistering.html
 history.html
 tasks.js
-base/themes/base.css
+base/login.html
 "/>
       </properties>
     </component>

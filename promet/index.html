@@ -16,7 +16,6 @@
   <script src="base/js/framework.js"></script>
   <script type="text/javascript" src="base/js/vendor/core-min.js"></script>
   <script type="text/javascript" src="base/js/vendor/sha1-min.js"></script>
-  <script type="text/javascript" src="base/js/vendor/less.js"></script>
 </head>
 <body>
 <nav>
@@ -41,43 +40,7 @@
 <div id="systray">
   <a href="#base/options" class="toolbutton"><i class="fa fa-gears"></i></a>
 </div>
-<script type="text/javascript">
-function OnConnected() {
-    console.log("were connected");
-    link=document.createElement('a');
-    link.className="loginbutton";
-    link.id="loginButton";
-    link.text="login";
-    function DoLogin() {
-      loadPage("base/login.html");
-    }
-    link.addEventListener('click',DoLogin);
-    document.getElementById('systray').appendChild(link);
-  }
-function OnDisconnected() {
-    console.log("were disconnected");
-    link = document.getElementById('loginButton');
-    if (link) {
-      link.parentNode.removeChild(link);
-    }
-    link = document.getElementById('logoutButton');
-    if (link) {
-      link.parentNode.removeChild(link);
-    }
-}
-function OnLoggedIn() {
-    console.log("were logged in");
-    link = document.getElementById('loginButton');
-    if (link) {
-      link.parentNode.removeChild(link);
-    }
-    link=document.createElement('a');
-    link.className="toolbutton";
-    link.id="logoutButton";
-    link.text="logout";
-    link.addEventListener('click',DoLogout);
-    document.getElementById('systray').appendChild(link);
-}
+<script type="text/javascript" src="base/login.js">
 </script>
 </body>
 </html>
