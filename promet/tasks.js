@@ -73,6 +73,7 @@ if (verifyLocalStorage() == true) {
 LoadTasks();
 // Set up a handler for submission
 function SubmitNewTask(){
+  console.log("SubmitNewTask()");
   // Add the new task
   var aTaskName = document.querySelector('#task-name');
   var newTask = { 'summary' : aTaskName.value,
