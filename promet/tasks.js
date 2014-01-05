@@ -117,4 +117,9 @@ if (IsConnectionOK){
   }
   );
 }
-
+//scroll to first task if there are enougth tasks
+var aToolbar = document.querySelectorAll('.toolbar')[1];
+if (aToolbar)
+  var ToolbarHeight = aToolbar.offsetHeight;
+var aHeight = findElementTop(document.querySelector('#task-list'));
+window.scrollTo(0,aHeight-ToolbarHeight);
