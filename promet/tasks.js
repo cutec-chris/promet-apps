@@ -91,8 +91,7 @@ function SubmitNewTask(){
   return false;
 }
 if (IsConnectionOK){
-  GetList("tasks","\"HASCHILDS\"<>\'Y\'",1,function (aSequence,aData)
-    {
+  GetList("tasks","HASCHILDS<>Y",1,function (aSequence,aData) {
     console.log("Sync started...");
     var RemoteTasks = aData;
     if (RemoteTasks)
@@ -114,6 +113,7 @@ if (IsConnectionOK){
         if (!found)
           addTask(RemoteTasks[r]);
       }
+    localStorage['tasks'] = JSON.stringify(tasks);
   }
   );
 }

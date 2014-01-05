@@ -18,6 +18,7 @@ timeregistering.html
 history.html
 tasks.js
 base/login.html
+base/js/framework.js
 "/>
       </properties>
     </component>
