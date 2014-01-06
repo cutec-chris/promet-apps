@@ -18,7 +18,7 @@ function addEntry(entry){
   var ndiv = document.createElement("div");
   nli.appendChild(ndiv);
   ndiv.setAttribute('id',entry.sql_id);
-  ndiv.innerHTML = '<label style="margin-left:5px;">'+task.summary+'</label>';
+  ndiv.innerHTML = '<label>'+entry.action+'</label>';
   // To memory
   entrys[entrys.length] = entry;
 }
@@ -30,7 +30,7 @@ if (verifyLocalStorage() == true) {
     // Get the last stored tasks and restore them to the UI.
     // Default to an empty array
     var jsoncode = localStorage.getItem('history');
-    var oldTasks = JSON.parse(jsoncode || '[]');
+    var oldEntrys = JSON.parse(jsoncode || '[]');
     for (var i=0;i<=oldEntrys.length-1;i++){
       addEntry(oldEntrys[i]);
     }
@@ -40,10 +40,11 @@ LoadEntrys();
 // Set up a handler for submission
 function SubmitNewEntry(){
   console.log("SubmitNewEntry()");
-  // Add the new task
+  // Add the new Entry
   var aSummary = document.querySelector('#entry-name');
-  var newEntry = { 'action' : aSummary,
-                  'sql_id' : undefined
+  var newEntry = { 'action' : aSummary.value,
+                  'sql_id' : undefined,
+                  'timestampd' : Date().toLocaleString()
                 };
   addEntry(newEntry);
   // In storage
@@ -80,4 +81,9 @@ if (IsConnectionOK){
   }
   );
 }
-
+//scroll to first task if there are enougth tasks
+var aToolbar = document.querySelectorAll('.toolbar')[1];
+if (aToolbar)
+  var ToolbarHeight = aToolbar.offsetHeight;
+var aHeight = findElementTop(document.querySelector('#entry-list'));
+window.scrollTo(0,aHeight-ToolbarHeight);

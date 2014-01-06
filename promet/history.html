@@ -6,14 +6,14 @@
   </div>
   <div class="content">
     <ul><li>
-    <form class="section" id="submitForm" onsubmit="SubmitNewTask();">
+    <form class="section" id="submitForm" onsubmit="SubmitNewEntry();">
     neu:
-      <input id="task-name" name="entry-name" type="text" style="width: 70%" />
-      <a class="small toolbutton" onclick="AddHistoryEntry();">+</a>
+      <input id="entry-name" name="entry-name" type="text" style="width: 70%" />
+      <a class="small toolbutton" onclick="SubmitNewEntry()">+</a>
     </form>
     </li></ul>
     <div class="section">
-      <ul id="task-list">
+      <ul id="entry-list">
       </ul>
     </div>
     <script type="text/javascript" src="history.js"></script>

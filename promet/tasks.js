@@ -79,7 +79,8 @@ function SubmitNewTask(){
   var newTask = { 'summary' : aTaskName.value,
                   'sql_id' : undefined,
                   'completed' : 'N',
-                  'lpriority' : 0
+                  'lpriority' : 0,
+                  'timestampd' : Date().toLocaleString()
                 };
   newTask.lpriority = tasks.length;
   addTask(newTask);
@@ -120,6 +121,7 @@ if (IsConnectionOK){
 //scroll to first task if there are enougth tasks
 var aToolbar = document.querySelectorAll('.toolbar')[1];
 if (aToolbar)
-  var ToolbarHeight = aToolbar.offsetHeight;
-var aHeight = findElementTop(document.querySelector('#task-list'));
-window.scrollTo(0,aHeight-ToolbarHeight);
+  var aToolbarHeight = aToolbar.offsetHeight;
+var aHeight = findElementTop(document.querySelector('#task-list'))[0];
+aHeight -= aToolbarHeight;
+window.scrollTo(0,aHeight);
