@@ -44,6 +44,7 @@ function SubmitNewEntry(){
   var aSummary = document.querySelector('#entry-name');
   var newEntry = { 'action' : aSummary.value,
                   'sql_id' : undefined,
+                  'id' : guid(),
                   'timestampd' : Date().toLocaleString()
                 };
   addEntry(newEntry);

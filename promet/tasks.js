@@ -78,6 +78,7 @@ function SubmitNewTask(){
   var aTaskName = document.querySelector('#task-name');
   var newTask = { 'summary' : aTaskName.value,
                   'sql_id' : undefined,
+                  'id' : guid(),
                   'completed' : 'N',
                   'lpriority' : 0,
                   'timestampd' : Date().toLocaleString()
