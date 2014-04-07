@@ -17,10 +17,8 @@ base/options.html
 tasks.html
 timeregistering.html
 history.html
-tasks.js
 history.js
-base/themes/web/theme.css
-base/themes/windowsphone/theme.css
+base/js/framework.js
 "/>
       </properties>
     </component>
