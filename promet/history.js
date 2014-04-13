@@ -56,9 +56,7 @@ function SubmitNewEntry(){
   return false;
 }
 if (IsConnectionOK){
-  var jsoncode = localStorage.getItem('history');
-  var oldEntrys = JSON.parse(jsoncode || '[]');
-  SyncList("history","",1,oldEntrys,function (aSequence,aData)
+  SyncList("history","",localStorage.getItem('history') || '[]',1,function (aSequence,aData)
     {
     console.log("Sync started...");
     var RemoteEntrys = aData;
