@@ -92,7 +92,7 @@ function SubmitNewTask(){
   // Don't post
   return false;
 }
-if (IsConnectionOK){
+if (IsConnectionOK()){
   GetList("tasks","HASCHILDS<>'Y'",1,function (aSequence,aData) {
     console.log("Sync started...");
     var RemoteTasks = aData;

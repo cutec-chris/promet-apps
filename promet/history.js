@@ -56,7 +56,7 @@ function SubmitNewEntry(){
   // Don't post
   return false;
 }
-if (IsConnectionOK){
+if (IsConnectionOK()){
   SyncList("history","",localStorage.getItem('history') || '[]',1,function (aSequence,aData)
     {
     console.log("Sync started...");
