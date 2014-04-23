@@ -43,16 +43,11 @@ function TaskDone(event){
 // This adds a task
 function addTask(task){
   // To the view
-  var nli=document.createElement("li");
   var list = document.querySelector('#task-list');
-  list.appendChild(nli);
-  var ndiv = document.createElement("div");
-  nli.appendChild(ndiv);
-  ndiv.setAttribute('id',task.lpriority);
-  ndiv.innerHTML = '<input type="checkbox" style="width:auto;display:inline;"><label style="margin-left:5px;">'+task.summary+'</label>';
-  ndiv.firstElementChild.checked = (task.completed=='Y');
+  list.innerHTML += template("task_template", task);
   // To memory
   tasks[tasks.length] = task;
+  var ndiv = list.lastElementChild;
   ndiv.firstElementChild.addEventListener('change',TaskDone);
 }
 function LoadTasks() {

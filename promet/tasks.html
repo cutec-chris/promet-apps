@@ -14,9 +14,15 @@
       <a class="small toolbutton" onclick="SubmitNewTask();">+</a>
     </form>
     </li></ul>
-
     <div class="section">
       <ul id="task-list">
+        <script type="text/html" id="task_template">
+          <li>
+            <div id="<%=lpriority%>">
+              <input type="checkbox" style="width:auto;display:inline;"><label style="margin-left:5px;"><%=summary%></label>
+            </div>
+          </li>
+        </script>
       </ul>
     </div>
     <a id="deletetasks" class="greenButton" onclick="DeleteDoneTasks();"/>erledigte Aufgaben löschen</a>

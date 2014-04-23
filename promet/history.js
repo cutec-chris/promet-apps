@@ -1,4 +1,3 @@
-console.log("enter history");
 // In memory tasks store
 entrys = [];
 // This will change the view if localStorage isn't available. It
