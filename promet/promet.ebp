@@ -18,8 +18,7 @@ tasks.html
 timeregistering.html
 history.html
 history.js
-base/themes/web/theme.css
-base/themes/android3/theme.css
+base/js/framework.js
 "/>
       </properties>
     </component>

@@ -1,6 +1,5 @@
 <html>
 <body>
-<body>
   <div class="toolbar">
     <h1>Verlauf</h1>
   </div>
@@ -14,6 +13,13 @@
     </li></ul>
     <div class="section">
       <ul id="entry-list">
+      <script type="text/html" id="history_template">
+        <li>
+          <div id="<%=external_id%>">
+            <label><%=action%></label>
+          </div>
+        </li>
+      </script>
       </ul>
     </div>
     <script type="text/javascript" src="history.js"></script>

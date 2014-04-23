@@ -1,3 +1,4 @@
+console.log("enter history");
 // In memory tasks store
 entrys = [];
 // This will change the view if localStorage isn't available. It
@@ -11,14 +12,9 @@ function verifyLocalStorage() {
   return true;
 }
 function addEntry(entry){
-  // To the view
-  var nli=document.createElement("li");
+  //To the view
   var list = document.querySelector('#entry-list');
-  list.appendChild(nli);
-  var ndiv = document.createElement("div");
-  nli.appendChild(ndiv);
-  ndiv.setAttribute('id',entry.sql_id);
-  ndiv.innerHTML = '<label>'+entry.action+'</label>';
+  list.innerHTML += template("history_template", entry);
   // To memory
   entrys[entrys.length] = entry;
 }
