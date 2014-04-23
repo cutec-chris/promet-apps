@@ -57,29 +57,7 @@ function SubmitNewEntry(){
   return false;
 }
 if (IsConnectionOK()){
-  SyncList("history","",localStorage.getItem('history') || '[]',1,function (aSequence,aData)
-    {
-    console.log("Sync started...");
-    var RemoteEntrys = aData;
-    if (RemoteEntrys)
-      for (var r=0;r<=RemoteEntrys.length-1;r++){
-        var found = false;
-        for (var i=0;i<=enrys.length-1;i++) {
-          if (entrys[i].sql_id==RemoteEntrys[r].sql_id)
-            {
-              if (entrys[i].timestampd>RemoteEntrys[r].timestampd) {
-                //sync out
-              } else {
-                //sync in
-                entrys[i].action = RemoteEntrys[r].action;
-              }
-              found = true;
-              break;
-            }
-        }
-        if (!found)
-          addEntry(RemoteEntrys[r]);
-      }
+  SyncList("history","",localStorage.getItem('history') || '[]',1,function (aSequence,aData){
   }
   );
 }

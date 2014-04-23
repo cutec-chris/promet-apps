@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <Project>
-    <component class="TProject">
+    <component name="_1" class="TProject">
       <properties>
         <string name="Name" value="Promet-App"/>
         <string name="Filenames" value="index.html
@@ -18,7 +18,8 @@ tasks.html
 timeregistering.html
 history.html
 history.js
-base/js/framework.js
+base/themes/web/theme.css
+base/themes/android3/theme.css
 "/>
       </properties>
     </component>
