@@ -8,17 +8,23 @@
     <ul><li>
       <form class="section" id="submitForm" onsubmit="times.SubmitNewEntry();">
       neu:
-        <input id="task-name" name="entry-name" type="text" style="width: 70%" />
+        <input id="entry-name" name="entry-name" type="text" style="width: 70%" />
         <a class="small toolbutton" onclick="times.SubmitNewEntry();">+</a>
       </form>
     </li></ul>
-    <script type="text/html" id="history_template">
+    <script type="text/html" id="time_stat_template">
     <ul><li>
          Zeit heute:<p style="display:inline;margin-left:5px;" id="timetoday"><%=TimeToday%></p><br>
          pausen heute:<p style="display:inline;margin-left:5px;" id="pausestoday"><%=PausesToday%></p><br>
          diese Woche:<p style="display:inline;margin-left:5px;" id="timeweek"><%=TimeThisWeek%></p><br>
     </li></ul>
     </script>
+    <ul id="entry-list">
+    <script type="text/html" id="time_template">
+    <li>
+    </li>
+    </script>
+    </ul>
   </div>
   <script type="text/javascript" src="timeregistering.js"></script>
 </body>
