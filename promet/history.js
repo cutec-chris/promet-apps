@@ -1,3 +1,4 @@
+var history = {
 // In memory tasks store
 entrys = [];
 // This will change the view if localStorage isn't available. It
@@ -62,3 +63,4 @@ if (aToolbar)
   var ToolbarHeight = aToolbar.offsetHeight;
 var aHeight = findElementTop(document.querySelector('#entry-list'));
 window.scrollTo(0,aHeight-ToolbarHeight);
+}

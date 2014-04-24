@@ -47,7 +47,7 @@ function addTask(task){
   list.innerHTML += template("task_template", task);
   // To memory
   tasks[tasks.length] = task;
-  var ndiv = list.lastElementChild;
+  var ndiv = list.lastElementChild.firstElementChild;
   ndiv.firstElementChild.addEventListener('change',TaskDone);
 }
 function LoadTasks() {

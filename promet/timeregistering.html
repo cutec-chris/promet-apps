@@ -6,20 +6,20 @@
   </div>
   <div class="content">
     <ul><li>
-      <form class="section" id="submitForm" onsubmit="SubmitNewTask();">
+      <form class="section" id="submitForm" onsubmit="times.SubmitNewEntry();">
       neu:
-        <input id="task-name" name="task-name" type="text" style="width: 70%" />
-        <a class="small toolbutton" onclick="StartNewTimeEntry();">+</a>
+        <input id="task-name" name="entry-name" type="text" style="width: 70%" />
+        <a class="small toolbutton" onclick="times.SubmitNewEntry();">+</a>
       </form>
     </li></ul>
-
+    <script type="text/html" id="history_template">
     <ul><li>
-         Zeit heute:<p style="display:inline;margin-left:5px;" id="timetoday">1:00</p><br>
-         pausen heute:<p style="display:inline;margin-left:5px;" id="pausestoday">0:20</p><br>
-         diese Woche:<p style="display:inline;margin-left:5px;" id="timeweek">10:20</p><br>
+         Zeit heute:<p style="display:inline;margin-left:5px;" id="timetoday"><%=TimeToday%></p><br>
+         pausen heute:<p style="display:inline;margin-left:5px;" id="pausestoday"><%=PausesToday%></p><br>
+         diese Woche:<p style="display:inline;margin-left:5px;" id="timeweek"><%=TimeThisWeek%></p><br>
     </li></ul>
-    <script>
     </script>
   </div>
+  <script type="text/javascript" src="timeregistering.js"></script>
 </body>
 </html>
