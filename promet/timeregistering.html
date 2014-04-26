@@ -8,8 +8,8 @@
     <ul><li>
       <form class="section" id="submitForm" onsubmit="times.SubmitNewEntry();">
       neu:
-        <input id="entry-name" name="entry-name" type="text" style="width: 70%" />
-        <a class="small toolbutton" onclick="times.SubmitNewEntry();">+</a>
+        <input id="entry-name" name="entry-name" type="text" class="form-input" />
+        <a class="small toolbutton fa fa-play form-button" onclick="times.SubmitNewEntry();"></a>
       </form>
     </li></ul>
     <script type="text/html" id="time_stat_template">
@@ -21,8 +21,11 @@
     </script>
     <ul id="entry-list">
     <script type="text/html" id="time_template">
-    <li>
-    </li>
+      <li>
+        <div id="<%=external_id%>">
+          <label><%=action%></label>
+        </div>
+      </li>
     </script>
     </ul>
   </div>

@@ -1,15 +1,5 @@
 // In memory tasks store
 tasks = [];
-// This will change the view if localStorage isn't available. It
-// returns true or false
-function verifyLocalStorage() {
-  if (!window.localStorage) {
-    document.querySelector('.section').style.display="none";
-    document.querySelector('#not-supported').style.display="block";
-    return false;
-  }
-  return true;
-}
 function DeleteDoneTasks(){
   console.log("DeleteDoneTasks");
   var i = 0;
