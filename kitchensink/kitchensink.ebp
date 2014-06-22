@@ -11,6 +11,14 @@ buttons.html
         <string name="OpenNames" value="index.html
 elements.html
 buttons.html
+base/themes/base.css
+base/themes/android2/theme.css
+base/themes/android3/theme.css
+base/themes/apple/theme.css
+base/themes/jqt/theme.css
+base/themes/web/theme.css
+base/themes/windowsphone/theme.css
+list.html
 "/>
       </properties>
     </component>
