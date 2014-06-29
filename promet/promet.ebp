@@ -14,14 +14,13 @@ cache.manifest
 timeregistering.js
 "/>
         <string name="OpenNames" value="index.html
-base/options.html
 tasks.html
 timeregistering.html
 history.html
 history.js
 base/js/framework.js
 tasks.js
-timeregistering.js
+base/README.md
 "/>
       </properties>
     </component>
