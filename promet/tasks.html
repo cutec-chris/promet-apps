@@ -9,14 +9,17 @@
   <div class="content">
     <div class="menubar">
       <a class="toolbutton fa fa-play"></a>
+      <a class="toolbutton fa fa-filter"></a>
+      <div style="visibility:hidden;height:0;">
+      <ul><li>
+      <form class="section" id="submitForm" onsubmit="SubmitNewTask();">
+      neu:
+        <input id="task-name" name="task-name" type="text" style="width: 70%" />
+        <a class="small toolbutton fa fa-play"></a>
+      </form>
+      </li></ul>
+      </div>
     </div>
-    <ul><li>
-    <form class="section" id="submitForm" onsubmit="SubmitNewTask();">
-    neu:
-      <input id="task-name" name="task-name" type="text" style="width: 70%" />
-      <a class="small toolbutton fa fa-play"></a>
-    </form>
-    </li></ul>
     <div class="section">
       <ul id="task-list">
         <script type="text/html" id="task_template">
