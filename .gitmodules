@@ -1,0 +1,21 @@
+[submodule "project"]
+	path = project
+	url = https://github.com/cutec-chris/promet-app-project-dx.git
+[submodule "times"]
+	path = times
+	url = https://github.com/cutec-chris/promet-app-times-dx.git
+[submodule "config"]
+	path = config
+	url = https://github.com/cutec-chris/promet-app-config-dx.git
+[submodule "tasks"]
+	path = tasks
+	url = https://github.com/cutec-chris/promet-app-tasks-dx.git
+[submodule "meeting"]
+	path = meeting
+	url = https://github.com/cutec-chris/promet-app-meeting-dx.git
+[submodule "appbase"]
+	path = appbase
+	url = https://github.com/cutec-chris/promet-appbase.git
+[submodule "codebase"]
+	path = codebase
+	url = https://github.com/cutec-chris/dhtmlx.git
