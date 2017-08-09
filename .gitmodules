@@ -19,3 +19,9 @@
 [submodule "codebase"]
 	path = codebase
 	url = https://github.com/cutec-chris/dhtmlx.git
+[submodule "cars"]
+	path = cars
+	url = https://github.com/cutec-chris/promet-app-cars-dx.git
+[submodule "documents"]
+	path = documents
+	url = https://github.com/cutec-chris/promet-app-documents-dx.git
