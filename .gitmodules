@@ -25,3 +25,6 @@
 [submodule "documents"]
 	path = documents
 	url = https://github.com/cutec-chris/promet-app-documents-dx.git
+[submodule "statistics"]
+	path = statistics
+	url = https://github.com/cutec-chris/promet-app-statistics-dx.git
