@@ -28,3 +28,6 @@
 [submodule "statistics"]
 	path = statistics
 	url = https://github.com/cutec-chris/promet-app-statistics-dx.git
+[submodule "masterdata"]
+	path = masterdata
+	url = https://github.com/cutec-chris/promet-app-masterdata-dx.git
