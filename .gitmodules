@@ -31,3 +31,6 @@
 [submodule "masterdata"]
 	path = masterdata
 	url = https://github.com/cutec-chris/promet-app-masterdata-dx.git
+[submodule "messages"]
+	path = messages
+	url = https://github.com/cutec-chris/promet-app-messages-dx.git
