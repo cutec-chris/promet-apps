@@ -15,7 +15,7 @@
 	url = https://github.com/cutec-chris/promet-app-meeting-dx.git
 [submodule "appbase"]
 	path = appbase
-	url = https://github.com/cutec-chris/promet-appbase.git
+	url = https://github.com/cutec-chris/promet-appbase-dx.git
 [submodule "codebase"]
 	path = codebase
 	url = https://github.com/cutec-chris/dhtmlx.git
