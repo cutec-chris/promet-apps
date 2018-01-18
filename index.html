@@ -26,10 +26,11 @@
       console.log('Loading App...');
       Avamm.AfterLogin = function(username,LoginContent) {
         console.log('AfterLogin executed...');
-        var main_layout = new dhtmlXLayoutObject(LoginContent, '1C');
-      	var a = main_layout.cells('a');
-      	a.hideHeader();
-        a.attachURL(GetBaseUrl()+'/wiki/Promet-ERP-help/users/'+encodeURI(username));
+        LoginContent.cells('a').progressOn();
+        LoginContent.attachEvent("onContentLoaded", function(id){
+          LoginContent.cells('a').progressOff();
+        });
+        LoginContent.cells('a').attachURL(GetBaseUrl()+'/wiki/Promet-ERP-help/users/'+encodeURI(username));
       }
       InitAvammApp();
       StartAvammApp();
