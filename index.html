@@ -31,7 +31,7 @@
           FixWikiContents(LoginContent.cells('a').getFrame());
           LoginContent.cells('a').progressOff();
         });
-        LoginContent.cells('a').attachURL(GetBaseUrl()+'/wiki/Promet-ERP-help/users/'+encodeURI(username));
+        LoginContent.cells('a').attachURL(GetBaseUrl()+'/wiki/Promet-ERP-help/users/'+encodeURI(Avamm.User.username));
       }
       InitAvammApp();
       StartAvammApp();
