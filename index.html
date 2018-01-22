@@ -24,6 +24,7 @@
     <script type="text/javascript">
     dhtmlxEvent(window,"load",function(){                          //provides your script as a handler of the 'onload' HTML event
       console.log('Loading App...');
+      InitAvammApp();
       Avamm.AfterLogin = function(username,LoginContent) {
         console.log('AfterLogin executed...');
         LoginContent.cells('a').progressOn();
@@ -33,7 +34,6 @@
         });
         LoginContent.cells('a').attachURL(GetBaseUrl()+'/wiki/Promet-ERP-help/users/'+encodeURI(Avamm.User.username));
       }
-      InitAvammApp();
       StartAvammApp();
     });
     </script>
