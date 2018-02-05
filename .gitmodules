@@ -34,3 +34,6 @@
 [submodule "messages"]
 	path = messages
 	url = https://github.com/cutec-chris/promet-app-messages-dx.git
+[submodule "calendar"]
+	path = calendar
+	url = https://github.com/cutec-chris/promet-app-calendar-dx.git
