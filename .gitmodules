@@ -1,9 +1,6 @@
 [submodule "project"]
 	path = project
 	url = https://github.com/cutec-chris/promet-app-project-dx.git
-[submodule "times"]
-	path = times
-	url = https://github.com/cutec-chris/promet-app-times-dx.git
 [submodule "config"]
 	path = config
 	url = https://github.com/cutec-chris/promet-app-config-dx.git
