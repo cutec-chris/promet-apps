@@ -34,3 +34,6 @@
 [submodule "calendar"]
 	path = calendar
 	url = https://github.com/cutec-chris/promet-app-calendar-dx.git
+[submodule "timereg"]
+	path = timereg
+	url = https://github.com/cutec-chris/promet-app-times-dx.git
