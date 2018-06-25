@@ -1,0 +1,8 @@
+      .dhxlayout_base_material div.dhx_cell_layout {
+          box-shadow: none;
+      }
+      .dhxlayout_base_material div.dhx_cell_layout div.dhx_cell_hdr {
+        background-color: hsla(200, 51%, 80%, 1);
+        color: #ffffff;
+      }
+
