@@ -37,3 +37,6 @@
 [submodule "timereg"]
 	path = timereg
 	url = https://github.com/cutec-chris/promet-app-times-dx.git
+[submodule "meetings"]
+	path = meetings
+	url = https://github.com/cutec-chris/promet-app-meeting-dx.git
