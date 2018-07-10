@@ -16,8 +16,12 @@
     </style>
   </head>
   <body>
+    <script src="appbase/startpage.js" type="text/javascript"></script>
     <script type="application/javascript">
-    rtl.run()
+    rtl.run();
+    window.addEventListener('AfterLogin',function(){
+      rtl.run("startpage");
+    });
     </script>
   </body>
 </html>
