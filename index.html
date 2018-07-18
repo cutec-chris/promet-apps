@@ -17,10 +17,13 @@
     </style>
   </head>
   <body>
+    <div id="noscript" style="justify-content: center;align-items: center;"><font face="verdana"><p align="center" id="lGlobalStatus">Dieses Gerät scheint die Ausführung von Web Applikationen (Javascript) nicht zu unterstützen oder zu verhindern. Um diese Anwendung zu benutzen ist Javascript erforderlich !</p></font></div>
     <script src="appbase/startpage.js" type="text/javascript"></script>
     <script type="application/javascript">
+    document.getElementById('lGlobalStatus').innerHTML = 'Anwendung wird geladen...';
     rtl.run();
     window.addEventListener('AfterLogin',function(){
+      document.getElementById('noscript').style.display = 'none';
       rtl.run("startpage");
     });
     </script>
