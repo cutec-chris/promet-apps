@@ -1,0 +1,15 @@
+{
+  "short_name": "Avamm",
+  "name": "Avamm Webapp",
+  "icons": [
+    {
+      "src": "appbase/images/world_icon64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "theme_color": "#3367D6"
+}
