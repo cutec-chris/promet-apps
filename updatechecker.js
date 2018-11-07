@@ -12,7 +12,7 @@ const PRECACHE_URLS = [
   'appbase/dhtmlx/dhtmlx.js',
   'appbase/dhtmlx/dhtmlx.css',
   'appbase/dhtmlx/fonts/font_awesome/css/font-awesome.min.css',
-  'appbase/dhtmlx/imgs/dhxlayout_material/*',
+//  'appbase/dhtmlx/imgs/dhxlayout_material/',
   'appbase/images/world_icon144.png'
   ];
 
