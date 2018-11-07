@@ -24,6 +24,17 @@
     <script src="appbase/appbase.js" type="text/javascript"></script>
     <script src="appbase/startpage.js" type="text/javascript"></script>
     <script type="application/javascript">
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('updatechecker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
     rtl.run();
     window.addEventListener('AfterLogin',function(){
       document.getElementById('noscript').style.display = 'none';
