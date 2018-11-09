@@ -3,17 +3,17 @@
    "name":"Avamm Webapp",
    "icons":[
       {
-         "src":"/images/appbase/images/world_icon64.png",
+         "src":"icons/world_icon64.png",
          "type":"image/png",
          "sizes":"64x64"
       },
       {
-         "src":"/images/appbase/images/world_icon144.png",
+         "src":"icons/world_icon144.png",
          "type":"image/png",
          "sizes":"144x144"
       },
       {
-         "src":"/images/appbase/images/world_icon192.png",
+         "src":"icons/world_icon192.png",
          "type":"image/png",
          "sizes":"192x192"
       }
