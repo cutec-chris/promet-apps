@@ -9,7 +9,7 @@ var precacheFiles = [
     'appbase/dhtmlx/dhtmlx.js',
     'appbase/dhtmlx/dhtmlx.css',
     'appbase/dhtmlx/fonts/font_awesome/css/font-awesome.min.css',
-    'appbase/images/world_icon144.png'
+    'appbase/images/world_icon144.png',
     'appbase/images/world_icon192.png'
     ];
 
