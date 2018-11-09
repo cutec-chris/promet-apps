@@ -20,6 +20,14 @@ self.addEventListener('install', function(evt) {
     console.log('Skip waiting on install');
     return self.skipWaiting();
   }));
+  var indexPage = new Request('index.html');
+  event.waitUntil(
+    fetch(indexPage).then(function(response) {
+      return caches.open(CACHE).then(function(cache) {
+        console.log('Cached index page during Install'+ response.url);
+        return cache.put(indexPage, response);
+      });
+  }));    
 });
 
 
