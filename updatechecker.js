@@ -1,65 +1,43 @@
-const PRECACHE = 'precache-v1';
-const RUNTIME = 'runtime';
+//This is the "Offline copy of pages" service worker
 
-// A list of local resources we always want to be cached.
-const PRECACHE_URLS = [
-  'index.html',
-  './', // Alias for index.html
-  'index.css',
-  'manifest.json',
-  'appbase/appbase.js',
-  'appbase/startpage.js',
-  'appbase/dhtmlx/dhtmlx.js',
-  'appbase/dhtmlx/dhtmlx.css',
-  'appbase/dhtmlx/fonts/font_awesome/css/font-awesome.min.css',
-//  'appbase/dhtmlx/imgs/dhxlayout_material/',
-  'appbase/images/world_icon144.png'
-  ];
-
-// The install handler takes care of precaching the resources we always need.
-self.addEventListener('install', event => {
+//Install stage sets up the index page (home page) in the cache and opens a new cache
+self.addEventListener('install', function(event) {
+  var indexPage = new Request('index.html');
   event.waitUntil(
-    caches.open(PRECACHE)
-      .then(cache => cache.addAll(PRECACHE_URLS))
-      .then(self.skipWaiting())
-  );
+    fetch(indexPage).then(function(response) {
+      return caches.open('pwabuilder-offline').then(function(cache) {
+        console.log('[PWA Builder] Cached index page during Install'+ response.url);
+        return cache.put(indexPage, response);
+      });
+  }));
 });
 
-// The activate handler takes care of cleaning up old caches.
-self.addEventListener('activate', event => {
-  const currentCaches = [PRECACHE, RUNTIME];
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
-    }).then(cachesToDelete => {
-      return Promise.all(cachesToDelete.map(cacheToDelete => {
-        return caches.delete(cacheToDelete);
-      }));
-    }).then(() => self.clients.claim())
-  );
-});
+//If any fetch fails, it will look for the request in the cache and serve it from there first
+self.addEventListener('fetch', function(event) {
+  var updateCache = function(request){
+    return caches.open('pwabuilder-offline').then(function (cache) {
+      return fetch(request).then(function (response) {
+        console.log('[PWA Builder] add page to offline'+response.url)
+        return cache.put(request, response);
+      });
+    });
+  };
 
-// The fetch handler serves responses for same-origin resources from a cache.
-// If no response is found, it populates the runtime cache with the response
-// from the network before returning it to the page.
-self.addEventListener('fetch', event => {
-  // Skip cross-origin requests, like those for Google Analytics.
-  if (event.request.url.startsWith(self.location.origin)) {
-    event.respondWith(
-      caches.match(event.request).then(cachedResponse => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
+  event.waitUntil(updateCache(event.request));
 
-        return caches.open(RUNTIME).then(cache => {
-          return fetch(event.request).then(response => {
-            // Put a copy of the response in the runtime cache.
-            return cache.put(event.request, response.clone()).then(() => {
-              return response;
-            });
-          });
+  event.respondWith(
+    fetch(event.request).catch(function(error) {
+      console.log( '[PWA Builder] Network request Failed. Serving content from cache: ' + error );
+
+      //Check to see if you have it in the cache
+      //Return response
+      //If not in the cache, then return error page
+      return caches.open('pwabuilder-offline').then(function (cache) {
+        return cache.match(event.request).then(function (matching) {
+          var report =  !matching || matching.status == 404?Promise.reject('no-match'): matching;
+          return report
         });
-      })
-    );
-  }
-});
+      });
+    })
+  );
+})
