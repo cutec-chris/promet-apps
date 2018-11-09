@@ -3,18 +3,25 @@
    "name":"Avamm Webapp",
    "icons":[
       {
-         "src":"appbase/images/world_icon64.png",
+         "src":"/images/appbase/images/world_icon64.png",
          "type":"image/png",
          "sizes":"64x64"
       },
       {
-         "src":"appbase/images/world_icon144.png",
+         "src":"/images/appbase/images/world_icon144.png",
          "type":"image/png",
          "sizes":"144x144"
+      },
+      {
+         "src":"/images/appbase/images/world_icon192.png",
+         "type":"image/png",
+         "sizes":"192x192"
       }
    ],
-   "start_url":"/#/startpage",
+   "start_url":"https://promet.tcsapps.de/",
    "background_color":"#3367D6",
    "display":"standalone",
-   "theme_color":"#3367D6"
+   "theme_color":"#3367D6",
+   "lang":"",
+   "orientation":"any"
 }
